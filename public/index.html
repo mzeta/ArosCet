@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>TP ARQ WEV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+
+
+<body style="font-family:Verdana;color:#aaaaaa;">
+
+<div style="background-color:#e5e5e5;padding:15px;text-align:center;">
+  <h1>Trabajo práctico Arquitectura web</h1>
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    <div class="menuitem">Link 1</div>
+    <div class="menuitem">Link 2</div>
+    <div class="menuitem">Link 3</div>
+    <div class="menuitem">Link 4</div>
+  </div>
+
+  <div class="main">
+
+    <h2 style="text-align: center;">Ejecutando HTML de la <strong>APP</strong> en AngularJS</h2>
+ 	
+ 	<img class="img-center" src="/static/images/stack.png" style="max-width:80%;height:auto;">
+ 	
+ 	<br>
+ 	<br>
+
+<div class="table-responsive" style="overflow-x:auto;">
+	<table ng-controller="ordersController">
+	<tr>
+ 		    <th class="text-center">Orden</th>
+ 		    <th class="text-center">Titulo</th>
+ 		    <th class="text-center">Id Cliente</th>
+ 		    <th class="text-center">Cliente</th>
+ 		    <th class="text-center">Asignado</th>
+ 		    <th class="text-center">Presupuesto</th>
+        <th class="text-center">Acción </th>
+  </tr>
+       
+   
+    <tr>    
+            <td><input type="number" class="form-control input-sm" placeholder="Orden" ng-model="order.order_id"></td>
+            <td><input type="text" class="form-control input-sm" placeholder="Titulo" ng-model="order.title"></td>
+            <td><input type="number" class="form-control input-sm" placeholder="001" ng-model="order.customer_id"></td>
+            <td><input type="text" class="form-control input-sm" placeholder="Cliente" ng-model="order.customer_name"></td>
+            <td><input type="text" class="form-control input-sm" placeholder="Asignado" ng-model="order.user_name"></td>
+            <td><input type="number" class="form-control input-sm" placeholder="Presupuesto" ng-model="order.quoute_id"></td>
+            <td><button type="button" class="btn btn-success btn-xs" ng-click="agregarOrden()">+</button></td>
+    </tr>
+  	<tr ng-repeat="order in orders">
+            <td>{{order.order_id}}</td>
+            <td>{{order.title}}</td>
+            <td>{{order.customer_id}}</td>
+            <td>{{order.customer_name}}</td>
+            <td>{{order.user_name}}</td>
+            <td>{{order.quoute_id}}</td>
+            <td><button type="button" class="btn btn-danger btn-xs" ng-click="borrarOrden(order._id)">-</button></td>
+        </tr>
+	</table>
+</div>
+
+  </div>
+
+  <div class="right">
+    <h2>About</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  </div>
+</div>
+
+<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:100px;">© copyright Martin Ceteri - Nicolás Arosteguy</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="/static/js/app.js"></script>
+</body>
+
+</html>
