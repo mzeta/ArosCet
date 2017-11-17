@@ -28,18 +28,3 @@ La OT es asignada a un usuario que es quien trabajar√° en la misma. La OT tendr√
 * _PUT /api/v1/users/{user\_id}_
 * _GET /api/v1/users/{user\_id}_
 * _DELETE /api/v1/users/{user\_id}_
-
-**3. Clientes**, poseen una orden de trabajo que a su vez esta asociada a un quotes
-* _GET /api/v1/customer_
-* _GET /api/v1/customer/quotes_
-* _POST /api/v1/customer_
-* _PUT /api/v1/customer/{customer\_id}_
-* _GET /api/v1/customer/{customer\_id}_
-* _DELETE /api/v1/customer/{customer\_id}_
-
-**4. Presupuesto** iniciado para una empresa particular, una vez aceptado se genera una orden de trabajo y se le asigna un usuario
-* _GET /api/v1/quotes_
-* _POST /api/v1/quotes_
-* _PUT /api/v1/quotes/{quotes\_id}_
-* _GET /api/v1/quotes/{quotes\_id}_
-* _DELETE /api/v1/quotes/{quotes\_id}_
